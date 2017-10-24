@@ -5,7 +5,8 @@ context: Learning Go and Tensorfow
 Initial goals:
 
 - [x] Image recognition based on a pre trained model
-- [ ] Image recognition based on manually retrained model
+- [x] Image recognition based on manually retrained model (Python)
+- [ ] Image recognition based on manually retrained model (Go)
 
 By default `whoami` uses a pre-trained TensorFlow [Inception-V3](https://arxiv.org/abs/1512.00567) model
 and is initially based on [this](https://outcrawl.com/image-recognition-api-go-tensorflow/) great example.
