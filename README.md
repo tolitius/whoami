@@ -1,23 +1,27 @@
 ## whoami
 
-context: Learning Go and Tensorfow
+context: Learning Tensorfow, OpenCV, Google Cloud Vision API
 
 Initial goals:
 
-- [x] Image recognition based on a pre trained model
-- [x] Image recognition based on manually retrained model (Python)
-- [ ] Image recognition based on manually retrained model (Go)
+- [x] Image recognition based on a pre trained TensorFlow model
+- [x] Image recognition based on manually retrained TensorFlow model (Python)
+- [ ] Image recognition based on manually retrained TensorFlow model (Go)
+- [x] Image detection with Google Vision API
+- [x] Face detection with OpenCV
 
-By default `whoami` uses a pre-trained TensorFlow [Inception-V3](https://arxiv.org/abs/1512.00567) model
-and is initially based on [this](https://outcrawl.com/image-recognition-api-go-tensorflow/) great example.
+A set of "vision" API examples from different sources
 
-## running it
+## Inception (TensorFlow)
+
+### running it
 
 ```bash
-docker-compose up --build
+$ cd tensor/inception
+$ docker-compose up --build
 ```
 
-## using it
+### using it
 
 ```bash
 $ ls -l doc/img
@@ -57,6 +61,32 @@ $ curl -s http://localhost:4242/whoami -F 'image=@doc/img/image.jpg'
     }
   ]
 }
+```
+
+## Google Cloud API
+
+```bash
+$ cd gcloud/vision
+```
+
+```bash
+$ go run detect.go main.go ../../doc/img/freddie.jpg
+```
+
+## OpenCV
+
+```bash
+$ cd opencv
+```
+
+```bash
+$ export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+```
+
+```bash
+$ python face_detect_cv3.py image-with-faces.jpg
+faces found: 42
+... exit?
 ```
 
 ## License
