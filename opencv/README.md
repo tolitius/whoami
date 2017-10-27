@@ -1,13 +1,15 @@
 ## Looking at OpenCV: Open Source Computer Vision Library
 
-this example is from [FaceDetect](https://github.com/shantnu/FaceDetect)
+based on the example from [FaceDetect](https://github.com/shantnu/FaceDetect)
 
 ```bash
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 ```
 
 ```bash
-$ python face_detect_cv3.py image-with-faces.jpg
-faces found: 42
-... exit?
+$ python detect_faces.py ../doc/img
+../doc/img/freddie.jpg: did not find faces
+../doc/img/image.jpg: did not find faces
+../doc/img/queen.jpg: faces found: 2
+next?
 ```
