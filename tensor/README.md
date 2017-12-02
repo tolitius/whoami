@@ -26,7 +26,7 @@ total 1064
 $
 ```
 
-<img src="doc/img/image.jpg" width="400px">
+<img src="../doc/img/image.jpg" width="400px">
 
 ```bash
 $ curl -s http://localhost:4242/whoami -F 'image=@doc/img/image.jpg'
